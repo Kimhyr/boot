@@ -2,48 +2,47 @@ ENTRY(start)
 
 SECTIONS
 {
-	. = 0x7C00;
+    . = 0x7C00;
 
-	.boot.sector.text :
-	{
-		*(.boot.sector)
+    .sector.text :
+    {
+        *(.sector)
+    }
 
-	}
-	
-	.boot.sector.data :
-	{
-		*(.boot.sector.data)
-	}
+    .sector.data :
+    {
+        *(.sector.data)
+    }
 
-	.boot.sector.rodata :
-	{
-		*(.boot.sector.rodata)
-	}
+    .sector.rodata :
+    {
+        *(.sector.rodata)
+    }
 
-	.boot.sector.footer 0x7DFE :
-	{
-		SHORT(0xAA55)
-	}
+    .sector.footer 0x7DFE :
+    {
+        SHORT(0xAA55)
+    }
 
-	. = 0x7E00;
+    . = 0x7E00;
 
-	.boot.text :
-	{
-		*(.boot.text)
-	}
+    .text :
+    {
+        *(.text)
+    }
 
-	.boot.data :
-	{
-		*(.boot.data)
-	}
+    .data :
+    {
+        *(.data)
+    }
 
-	.boot.rodata :
-	{
-		*(.boot.rodata)
-	}
+    .rodata :
+    {
+        *(.rodata)
+    }
 
-	.boot.bss :
-	{
-		*(.boot.bss)
-	}
+    .bss :
+    {
+        *(.bss)
+    }
 }

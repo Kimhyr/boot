@@ -1,3 +1,5 @@
+WARNING: this is far from complete, so it's not UEFI-compatable at all
+
 # Boot
 
 A simple UEFI-compatable x86-64 bootloader created for educational purposes.
